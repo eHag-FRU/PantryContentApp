@@ -1,4 +1,4 @@
-#Pantry App
+# Pantry App
 
 This application is to help keep a track of what is in a pantry, while simple, it is useful for my immediate family. My immediate family has a very deep pantry cuppoard that is hard to see and remember what is all inside.
 
