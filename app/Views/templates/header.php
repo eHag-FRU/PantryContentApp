@@ -18,6 +18,6 @@
         <body class="w3-light-grey w3-mobile">
             <header class="w3-container w3-blue">
 
-                <span class="w3-center"><h1>Panty List</h1></span>
+                <span class="w3-center"><h1>Pantry List</h1></span>
 
             </header>    

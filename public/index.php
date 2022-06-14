@@ -29,6 +29,14 @@ require rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'bootstra
 require_once SYSTEMPATH . 'Config/DotEnv.php';
 (new CodeIgniter\Config\DotEnv(ROOTPATH))->load();
 
+
+
+header('Access-Control-Allow-Origin: *');
+
+header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+
+
+
 /*
  * ---------------------------------------------------------------
  * GRAB OUR CODEIGNITER INSTANCE

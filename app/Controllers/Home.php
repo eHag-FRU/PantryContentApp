@@ -2,20 +2,22 @@
 
 namespace App\Controllers;
 
+use App\Models\Pantry;
+
 class Home extends BaseController
 {
     public function index() {
+        //Sets up a new model
+        $model = new Pantry();
+
         $data = [
-            "pantryData" => [["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"],["Name" => "Chips", "ExpDate" => "01/09/1980", "Opened" => "Yes"], ["Name" => "Orange", "ExpDate" => "04/21/1980", "Opened" => "No"]]
+            "pantryData" => $model -> get_all(),
         ];
 
         echo view("templates/header.php");
         echo view("index.php", $data);
         echo view("Modals/add.php");
+        echo view("Modals/edit.php");
         echo view("templates/footer.php");
-    }
-
-    private function retriveList() {
-
     }
 }
